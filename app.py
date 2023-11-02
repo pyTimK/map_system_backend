@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 
-from ml import create_model
+from ml import predict_barangay_data
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -23,7 +23,7 @@ def home():
 
         # Now, 'data' is a Python dictionary containing the JSON data
         # print(data)
-        create_model(data)
+        predict_barangay_data(data)
         return data, 200
     else:
         print("Invalid JSON data")
