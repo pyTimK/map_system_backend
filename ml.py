@@ -76,6 +76,7 @@ def convert_to_input_models(yearData: YearData) -> InputModels:
 
 #! GENERATE MODEL
 def generate_model(input_model: InputModel) -> LinearRegression:
+  # print(input_model)
   X = np.array(input_model["X"])
   y = np.array(input_model["y"])
   
